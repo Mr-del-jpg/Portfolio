@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ankit Sahastrarjuna — Personal Brand & Designer</title>
+  <meta name="description" content="Personal brand and designer focused on learning, practical application, and real-world analysis." />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0e0e11;
+      --bg-soft: #15151a;
+      --text: #e6e6eb;
+      --text-muted: #a1a1aa;
+      --accent: #7c7cff;
+      --border: #23232a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Layout */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 120px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(14,14,17,0.8);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+    }
+
+    .nav {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      color: var(--text-muted);
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 14px 32px;
+      border: 1px solid var(--accent);
+      border-radius: 40px;
+      color: var(--accent);
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .cta:hover {
+      background: var(--accent);
+      color: #0e0e11;
+    }
+
+    /* Section Titles */
+    .section-title {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .section-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 32px;
+    }
+
+    /* About */
+    .about p {
+      max-width: 700px;
+      color: var(--text-muted);
+      font-size: 17px;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 32px;
+    }
+
+    .skill {
+      padding: 32px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .skill h3 {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .skill p {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* Work */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+
+    .work {
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--bg-soft);
+    }
+
+    .work h3 {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .work span {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* Contact */
+    .contact-box {
+      padding: 48px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--bg-soft);
+      text-align: center;
+    }
+
+    .contact-box p {
+      margin-bottom: 24px;
+      color: var(--text-muted);
+    }
+
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* Animations */
+    .fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">Ankit Sahastrarjuna</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Expertise</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container fade">
+    <h1>Personal brand & designer</h1>
+    <p>
+      Focused on learning deeply, applying concepts in real-world scenarios,
+      and analysing results to build practical field experience.
+    </p>
+    <a class="cta" href="#contact">Let’s connect</a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container fade">
+    <div class="section-title">About</div>
+    <div class="section-heading">A mindset built on learning & application</div>
+    <div class="about">
+      <p>
+        I approach design and personal branding as an evolving system — learn the fundamentals,
+        apply them in practical environments, analyse outcomes, and iterate.
+        This philosophy allows me to grow through real experience rather than theory alone.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container fade">
+    <div class="section-title">Expertise</div>
+    <div class="section-heading">Design thinking & execution</div>
+    <div class="skills-grid">
+      <div class="skill">
+        <h3>Design Fundamentals</h3>
+        <p>Minimalism, hierarchy, spacing, typography, visual balance.</p>
+      </div>
+      <div class="skill">
+        <h3>Personal Branding</h3>
+        <p>Identity building, clarity of message, long-term positioning.</p>
+      </div>
+      <div class="skill">
+        <h3>Practical Learning</h3>
+        <p>Hands-on experimentation with real feedback loops.</p>
+      </div>
+      <div class="skill">
+        <h3>Analysis & Iteration</h3>
+        <p>Studying outcomes to refine systems and decisions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="container fade">
+    <div class="section-title">Work</div>
+    <div class="section-heading">Conceptual explorations</div>
+    <div class="work-grid">
+      <div class="work">
+        <h3>Minimal Portfolio Concept</h3>
+        <span>Personal branding experiment</span>
+      </div>
+      <div class="work">
+        <h3>Dark UI System</h3>
+        <span>Interface & visual consistency study</span>
+      </div>
+      <div class="work">
+        <h3>Content Identity Framework</h3>
+        <span>Conceptual brand structure</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container fade">
+    <div class="contact-box">
+      <div class="section-heading">Get in touch</div>
+      <p>
+        Interested in collaboration, ideas, or meaningful conversations?
+      </p>
+      <a class="cta" href="mailto:ankithegreat5200@gmail.com">ankithegreat5200@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 Ankit Sahastrarjuna
+</footer>
+
+<script>
+  const fades = document.querySelectorAll('.fade');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  fades.forEach(fade => observer.observe(fade));
+</script>
+
+</body>
+</html>
